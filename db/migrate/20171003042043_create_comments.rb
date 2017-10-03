@@ -3,8 +3,7 @@ class CreateComments < ActiveRecord::Migration[5.1]
     create_table :comments do |t|
       t.string :id
       t.string :subject
-      t.string :rate
-      t.string :integer
+      t.integer :rate
       t.string :comment
       t.landlord :reference
 

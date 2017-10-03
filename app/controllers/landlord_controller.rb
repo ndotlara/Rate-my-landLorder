@@ -1,2 +1,0 @@
-class LandlordController < ApplicationController
-end

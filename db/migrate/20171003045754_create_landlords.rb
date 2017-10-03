@@ -4,6 +4,8 @@ class CreateLandlords < ActiveRecord::Migration[5.1]
       t.string :firstname
       t.user :reference
       t.string :address
+      t.string :force
+      t.string :app/models/landlord.rb
 
       t.timestamps
     end
