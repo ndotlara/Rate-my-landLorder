@@ -20,9 +20,11 @@ ActiveRecord::Schema.define(version: 20171003041043) do
     t.integer "rate"
     t.string "comment"
     t.bigint "landlord_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["landlord_id"], name: "index_comments_on_landlord_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "examples", force: :cascade do |t|
@@ -53,5 +55,7 @@ ActiveRecord::Schema.define(version: 20171003041043) do
   end
 
   add_foreign_key "comments", "landlords"
+  add_foreign_key "comments", "users"
   add_foreign_key "examples", "users"
+  add_foreign_key "landlords", "users"
 end

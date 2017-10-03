@@ -8,9 +8,9 @@ curl "${API}${URL_PATH}/1" \
   --header "Authorization: Token token=$TOKEN"
   --data '{
     "landlord": {
-      "firstname": "firstname",
-      "address": "address",
-      "user_id": "user_id"
+      "firstname": "'"${FIRSTNAME}"'",
+      "address": "'"${ADDRESS}"'",
+      "user_id": "'"${USER_ID}"'"
     }
   }'
 

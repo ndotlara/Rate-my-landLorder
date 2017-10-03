@@ -4,5 +4,5 @@ class User < ApplicationRecord
   include Authentication
   has_many :examples
   has_many :landlords
-  has_many :comments
+  has_many :comments, throught
 end

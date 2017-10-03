@@ -5,6 +5,7 @@ class CreateComments < ActiveRecord::Migration[5.1]
       t.integer :rate
       t.string :comment
       t.references :landlord, foreign_key: true
+      t.references :user, foreign_key: true
 
       t.timestamps
     end
