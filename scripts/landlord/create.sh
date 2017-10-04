@@ -1,9 +1,9 @@
 #!/bin/bash
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/landlords"
-FIRSTNAME=${FIRSTNAME}
+FIRSTNAME=${NAME}
 ADDRESS=${ADDRESS}
-USER_ID=${USER_ID}
+USER_ID=${USERID}
 curl "${API}${URL_PATH}" \
   --include \
   --request POST \
@@ -11,9 +11,9 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=$TOKEN" \
   --data '{
     "landlord": {
-      "firstname": "'"${FIRSTNAME}"'",
+      "firstname": "'"${NAME}"'",
       "address": "'"${ADDRESS}"'",
-      "user_id": "'"${USER_ID}"'"
+      "user_id": "'"${USERID}"'"
     }
   }'
 

@@ -19,4 +19,6 @@ curl "${API}${URL_PATH}" \
     }
   }'
 
+       sh scripts/comments/update.sh
+
 echo
